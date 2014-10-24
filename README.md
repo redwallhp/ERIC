@@ -62,7 +62,7 @@ ERIC can relay chat to two places: a web interface powered by Express.js and Soc
 
 For the web interface, you can set the port and domain it listens on, the default being http://localhost:3333. This should be good for most cases, unless you intend on using it as a public-facing service. In that case, you should set the `read_only` flag to `true` so the chat input will be disabled. (Otherwise anyone could chat as the idling account.)
 
-For IRC, you set the IRC server and the nickname that ERIC will use. If you look back at the part of the configuration where you set the game servers up, that is where you specify the channel the chat will be output to. (This is so you can map multiple servers to their own channels.) The `command_nicks` array contains a list of IRC users who are allowed to use the !say command to send chat back to the game. (`!say Hello') Setting this to an empty `[]` array will disable this feature for everyone.
+For IRC, you set the IRC server and the nickname that ERIC will use. If you look back at the part of the configuration where you set the game servers up, that is where you specify the channel the chat will be output to. (This is so you can map multiple servers to their own channels.) The `command_nicks` array contains a list of IRC users who are allowed to use the !say command to send chat back to the game. (`!say Hello`) Setting this to an empty `[]` array will disable this feature for everyone.
 
 	exports.relays = {
 
