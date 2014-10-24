@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Minecraft Idle Client</title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+	<div class="container">
+
+		<h3>Servers</h3>
+
+		<ul>
+			{{#each servers}}
+				<li><a href="/server/{{this.id}}">{{this.host}}:{{this.port}}</a></li>
+			{{/each}}
+		</ul>
+
+	</div>
+
+</body>
+</html>

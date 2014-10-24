@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Minecraft Idle Client</title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
+	<script>
+		window.chat_domain = "{{ domain }}";
+		window.chat_port = "{{ port }}";
+		window.chat_server = "{{ server_id }}";
+	</script>
+	<script src="/js/chat.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+</head>
+
+
+<body>
+
+	<div class="container">
+
+		{{#unless read_only}}
+			<form id="chatform">
+				<div class="input-group">
+					<input id="chatfield" type="text" class="form-control" autocomplete="off">
+					<span class="input-group-btn">
+						<input class="btn btn-default" type="submit">Send</input>
+					</span>
+				</div>
+			</form>
+		{{/unless}}
+
+		<table id="chat" class="table table-bordered table-striped"></table>
+
+	</div>
+
+</body>
+</html>
